@@ -1,0 +1,13 @@
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.csproj.AssemblyReference.cache
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.pdb
+C:\Users\isadz\OneDrive\Desktop\LaCasa - Copy\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache

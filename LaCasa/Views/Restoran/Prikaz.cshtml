@@ -1,0 +1,86 @@
+﻿@model RestoranPrikazVM
+
+@{ 
+    ViewData["Title"] = "Prikaz";
+
+}
+
+<h1>Prikaz</h1>
+<a href="/Restoran/Dodaj" class="btn btn-primary">Dodaj Restoran</a>
+
+<form>
+    <input name="q" value="@Model.q" />
+    <input type="submit" value="Trazi" />
+</form>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Adresa</th>
+            <th>Broj telefona</th>
+            <th>Radno vrijeme</th>
+            <th>Tip kuhinje</th>
+            <th>Akcija</th>
+            <th>Recenzije</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (RestoranPrikazVM.Row r in Model.restorani)
+        {
+            <tr>
+                <td>@r.Naziv</td> 
+                <td>@r.Adresa</td>
+                <td>@r.Brojtelefona</td>
+                <td>@r.RadnoVrijeme</td>
+                <td>@r.TipKuhinje</td>
+                <td>
+                    <a href="/Restoran/Obrisi?RestoranID=@r.RestoranID" class="btn btn-danger"> Obrisi </a>
+                    <a href="/Restoran/Dodaj?RestoranID=@r.RestoranID" class="btn btn-primary"> Uredi </a>
+
+                </td>
+                <td>
+                    <button onclick="PrikaziRecenzije(@r.RestoranID)" class="btn btn-primary"> Prikazi </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="ajaxPrikaz" style="border:1px solid black"></div>
+
+<script>
+    function PrikaziRecenzije(RestoranID) {
+        var url = "/Recenzija/Prikaz?RestoranID=" + RestoranID;
+        $.get(url, function (d) {
+            $("#ajaxPrikaz").html(d);
+        });
+    }
+
+    function ObrisiRecenziju(RecenzijaID) {
+        var url = "/Recenzija/Obrisi?RecenzijaID=" + RecenzijaID;
+        $.get(url, function (d) {
+            alert("Uspjesno obrisana recenzija");
+            $("#ajaxPrikaz").html(d);
+        });
+    }
+    function DodajRecenziju(RestoranID) {
+        var url = "/Recenzija/Dodaj?RestoranID=" + RestoranID;
+        $.get(url, function (d) {
+            $("#ajaxPrikaz").html(d);
+        });
+    }
+    function RecenzijaSnimi() {
+        var form = $("#RecenzijaForma");
+        var url = "/Recenzija/Snimi";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function (data) {
+                $("#ajaxPrikaz").html(data);
+            }
+        });
+    }
+</script>

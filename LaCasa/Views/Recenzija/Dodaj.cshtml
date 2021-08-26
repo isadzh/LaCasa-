@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+@model RecenzijaDodajVM
+
+
+<form id="RecenzijaForma">
+    <label>RestoranID</label>
+    <input asp-for="RestoranID" hidden />
+
+    <label>Opis</label>
+    <input asp-for="Opis" />
+
+    <label>Ocjena</label>
+    <input asp-for="Ocjena" />
+</form>
+
+<button onclick="RecenzijaSnimi()">Snimi</button>

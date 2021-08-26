@@ -1,0 +1,29 @@
+﻿@model KategorijaDodajVM
+
+<div class="d-flex justify-content-center">
+    <div class="col-md-8 ">
+        <h2 class="text-center mb-5">Dodaj restoran</h2>
+        <form asp-action="Snimi" asp-controller="Kategorija">
+            <div style="display:none">
+                <label>Kategorija ID</label>
+                <input readonly asp-for="KategorijaID" />
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Naziv</label>
+                        <input class="form-control" asp-for="Naziv" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Opis</label>
+                        <input class="form-control" asp-for="Opis" />
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Snimi" />
+        </form>
+    </div>
+</div>

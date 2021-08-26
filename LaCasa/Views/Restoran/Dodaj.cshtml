@@ -1,0 +1,59 @@
+﻿@model RestoranDodajVM
+
+    <div class="d-flex justify-content-center">
+        <div class="col-md-8 ">
+            <h2 class="text-center mb-5">Dodaj restoran</h2>
+            <form asp-action="Snimi" asp-controller="Restoran">
+                <div style="display:none">
+                    <label>Restoran ID</label>
+                    <input readonly asp-for="ID" />
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Registarski broj</label>
+                            <input class="form-control" asp-for="RegistarskiBroj" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Naziv Restorana</label>
+                            <input class="form-control" asp-for="Naziv" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Adresa</label>
+                            <input class="form-control" asp-for="Adresa" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Broj Telefona</label>
+                            <input class="form-control" asp-for="BrojTelefona" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Radno Vrijeme</label>
+                            <input class="form-control" asp-for="RadnoVrijeme" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Tip Kuhinje</label>
+                            <select class="form-control" asp-for="TipKuhinjeID" asp-items="Model.kuhinje"></select>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Snimi" />
+            </form>
+        </div>
+    </div>

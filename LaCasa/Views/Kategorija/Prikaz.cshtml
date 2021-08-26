@@ -1,0 +1,35 @@
+﻿@model KategorijaPrikazVM
+
+@{ ViewData["Title"] = "Prikaz";
+
+}
+
+<h1>Prikaz kategorija (admin)</h1>
+<a href="/Kategorija/Dodaj" class="btn btn-primary mb-4">Dodaj Kategoriju</a>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Opis</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KategorijaPrikazVM.Row k in Model.kategorije)
+        {
+        <tr>
+            <td>@k.Naziv</td>
+            <td>@k.Opis</td>
+            <td>
+                <a href="/Kategorija/Obrisi?KategorijaID=@k.KategorijaID" class="btn btn-danger"> Obrisi </a>
+                <a href="/Kategorija/Dodaj?KategorijaID=@k.KategorijaID" class="btn btn-primary"> Uredi </a>
+            </td>
+            <!--
+                <td>
+                    <button onclick="PrikaziRecenzije(@k.KategorijaID)" class="btn btn-primary"> Prikazi </button>
+                </td>
+            -->
+        </tr>
+        }
+    </tbody>
+</table>
